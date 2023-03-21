@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-time: #323238;
+    --color-time-white: #ffff;
+
+    --color-icons: #C4C4CC;
+
+    --bg-svg: #E1E1E6;
+
+    --bg-dark: #000000;
+    --bg-dark-card: #29292E;
+
+    font-size: 62.5%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 19.2rem;
+}
+
+.icons {
+    display: flex;
+    gap: 4rem;
+    margin-top: .17rem;
+}
+
+
+span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.6rem;
+    color: var(--color-time);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.cardsvg {
+    width: 13.8rem;
+    height: 15.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 2.4rem;
+    background-color: var(--bg-svg) ;
+}
+
+.cardsvg:hover{
+    border: 3px solid rgb(28, 113, 224);
+    cursor: pointer;
+}
+
+input {
+    width: 9rem;
+    margin-top: 3.2rem;
+}
+
+input[type="range"]{
+    appearance: none;
+    background-color: var(--color-time);
+    height: .4rem;
+    border-radius: .5rem;
+}
+
+#rangeColor[type="range"]{
+    background-color: var(--bg-svg);
+}
+
+
+
+input[type="range"]::-webkit-slider-thumb{
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-time);
+}
+
+#rangeColor[type="range"]::-webkit-slider-thumb{
+    background-color: var(--bg-svg);
+}
+
+
+.cardsvg:nth-child(2){
+    background-color: #02799D;
+}
+
+.colores path:nth-child(1){
+    fill: white;
+ }
+
+
+.sol, .lua {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 6rem 6rem;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+    
+}
+
+.dark {
+    background-color: var(--bg-dark);
+}
+
+.dark span {
+    color: var(--color-time-white);
+}
+
+.dark .cardsvg {
+    background-color: var(--bg-dark-card);
+}
+
+.dark .cardsvg:nth-child(2){
+    background-color: #0A3442;
+}
+
+.dark svg path{
+   fill: var(--color-icons);
+}
+
+.dark input[type="range"]::-webkit-slider-thumb{
+    background-color: var(--bg-svg);
+}
+
+.dark input[type="range"]{
+    background-color: var(--bg-svg);
+}
+
+
+@media(max-width: 900px){
+   .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   }
+}
+
+@media(max-width: 600px){
+    .sol, .lua {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem 3rem;
+        cursor: pointer;
+    }
+}
+
+
