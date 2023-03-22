@@ -12,7 +12,6 @@ export default function () {
         fire.pause()
     }
 
-
     function buttonRain() {
         forest.pause()
         rain.play()

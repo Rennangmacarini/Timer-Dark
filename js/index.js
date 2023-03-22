@@ -12,10 +12,12 @@ const pause = document.querySelector(".pause")
 const big = document.querySelector(".big")
 const small = document.querySelector(".small")
 
-const sonone = document.querySelector("#sonone")
-const sontwo = document.querySelector("#sontwo")
-const sonthree = document.querySelector("#sonthree")
-const sonfour = document.querySelector("#sonfour")
+const florestCard = document.querySelector("#florest-card")
+const rainCard = document.querySelector("#rain-card")
+const coffeeCard = document.querySelector("#coffee-card")
+const fireplaceCard = document.querySelector("#fireplace-card")
+
+const florestSlider = document.querySelector("#florest-card input")
 
 let minutes
 let seconds
@@ -45,6 +47,7 @@ function countDown(){
     },1000);
 }
 
+
 play.addEventListener("click", function(){
     countDown()
 })
@@ -68,19 +71,26 @@ small.addEventListener('click', function(){
 
 })
 
-sonone.addEventListener("click", function () {
+florestCard.addEventListener("click", function () {
     sound.buttonForest()
 })
 
-sontwo.addEventListener("click", function () {
+const handleVolume = (e) => {
+    sound.buttonForest = e.target.value;
+}
+
+florestSlider.addEventListener("input", handleVolume);
+
+
+rainCard.addEventListener("click", function () {
     sound.buttonRain()
 })
 
-sonthree.addEventListener("click", function () {
+coffeeCard.addEventListener("click", function () {
     sound.buttonCoffee()
 })
 
-sonfour.addEventListener("click", function () {
+fireplaceCard.addEventListener("click", function () {
     sound.buttonFire()
 })
 
